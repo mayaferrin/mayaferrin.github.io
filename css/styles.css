@@ -1,0 +1,259 @@
+html {
+	box-sizing: border-box;
+}
+*, *:before, *: after {
+	box-sizing: inherit;
+}
+
+/* Header */
+header {
+	margin-bottom: 10px;
+}
+header img {
+  margin: 0 10px 0 10px;
+}
+header h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+	padding-left: 20px;
+}
+
+/* Navigation */
+nav {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 200;
+	font-size: 25px;
+}
+.navbar a {
+	color: #000;
+	text-decoration: none;
+}
+.navbar, .name, .navnameicon, .navlinks, .socialmedia {
+	display: flex;
+	align-items: center;
+}
+.index {
+	justify-content: flex-end;
+	height: 75px;
+}
+.name {
+	justify-content: flex-start;
+}
+.navnameicon {
+	flex-grow: 10;
+	justify-content: flex-start;
+}
+
+.navlinks ul {
+  list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+.navlinks li {
+  display: inline;
+  padding: 30px;
+}
+.navlinks a {
+	position: relative;
+  color: #000;
+  text-decoration: none;
+}
+.navlinks a:hover {
+  color: indianred;
+}
+.navlinks a::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: indianred;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+.navlinks a:hover::before {
+  visibility: visible;
+  transform: scaleX(1);
+}
+.active a:link::before {
+	content: "";
+  position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: indianred;
+	visibility: visible;
+  transform: scaleX(1);
+}
+
+/* Dropdown menu */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+	position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content a {
+  color: black;
+	font-size: 20px;
+  padding: 10px 14px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Main section - general attributes */
+h1 {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: bold;
+	font-size: 25px;
+	margin: auto;
+	padding: 5px 0;
+}
+h2 {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: normal;
+	font-size: 25px;
+	margin: auto;
+	padding: 5px 0;
+}
+p {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	margin: auto;
+}
+footer {
+  font-family: 'Work Sans', sans-serif;
+	font-weight: 300;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.content {
+  margin: 10px 60px;
+}
+.content a {
+	font-family: 'Work Sans', sans-serif;
+	font-weight: normal;
+	font-size: 20px;
+	margin: auto;
+	text-decoration: none;
+}
+
+.intro {
+	display: inline-flex;
+	justify-content: space-around;
+	margin: 0;
+}
+.intro svg {
+	width: 100%;
+	height: auto;
+	flex-grow: 1;
+}
+.intro h1 {
+	font-family: 'Permanent Marker', cursive;
+  font-weight: normal;
+	padding: 20px 0 5px 0;
+}
+.introtext {
+	padding-left: 10px;
+}
+
+
+
+
+/* About page */
+.about {
+	/* background: rgba(92, 164, 169, 0.2); */
+	margin: 0 50px;
+	/*padding: 20px 20px; */
+	border-radius: 20px;
+
+}
+.about h2 {
+	padding: 0 0 5px 0;
+}
+.about img {
+
+	width: 40%;
+}
+
+
+/* Projects page */
+.project-item {
+	background: rgba(205,92,92, 0.2);
+	margin: 20px 0;
+	padding: 20px 20px;
+	border-radius: 20px;
+	overflow: auto;
+}
+.project-item .btn {
+  color: #F7FFF7;
+  background: #CD5C5C;
+  text-decoration: none;
+  padding: 8px;
+	margin: 10px 0;
+  border-radius: 4px;
+  display: inline-block;
+	float: right;
+}
+.project-item .btn:hover {
+  background: rgb(205,149,92);
+}
+.project-item img {
+	width: 300px;
+	float: left;
+	margin-right: 20px;
+	border-radius: 10px;
+}
+.project-contents h2 {
+	font-weight: bold;
+}
+.project-contents p {
+	min-height: 125px;
+}
+
+@media (max-width: 750px) {
+	.project-item {
+		display: block;
+	}
+	.project-item img {
+		width: 100%;
+		margin: 0 auto 10px auto;
+	}
+	.navlinks li {
+	  display: block;
+	  padding: 0;
+		margin: 0 20px;
+	}
+	.name h1 {
+		padding: 0 0 0 20px;
+	}
+}
+
+@media (max-width: 450px) {
+	h2 {
+		font-size: 20px;
+	}
+	p {
+		font-size: 15px;
+	}
+	.content a {
+		font-size: 15px;
+	}
+}

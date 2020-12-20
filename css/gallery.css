@@ -1,0 +1,59 @@
+#gallery {
+  line-height: 0;
+  column-count: 5;
+  column-gap: 10px;
+  margin: 20px 60px;
+}
+
+#gallery img {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  #gallery {
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  #gallery {
+  column-count:         3;
+  }
+}
+@media (max-width: 800px) {
+  #gallery {
+  column-count:         2;
+  }
+}
+@media (max-width: 400px) {
+  #gallery {
+  column-count:         1;
+  }
+}
+
+
+/* Back to top button */
+#myBtn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0);
+  cursor: pointer;
+  width: 40px;
+	height: 40px;
+  border-radius: 100px;
+  padding: 0;
+}
+
+#myBtn i {
+  color: #b7b8b4;
+  font-size: 3em;
+}
+
+#myBtn i:hover {
+  color: indianred;
+}
