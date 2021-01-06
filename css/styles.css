@@ -4,6 +4,13 @@ html {
 *, *:before, *: after {
 	box-sizing: inherit;
 }
+html, body {
+	height: 100%;
+}
+body {
+	display: flex;
+	flex-direction: column;
+}
 
 /* Header */
 header {
@@ -117,6 +124,9 @@ nav {
 }
 
 /* Main section - general attributes */
+main {
+	flex: 1;
+}
 h1 {
 	font-family: 'Work Sans', sans-serif;
 	font-weight: bold;
@@ -140,8 +150,9 @@ p {
 footer {
   font-family: 'Work Sans', sans-serif;
 	font-weight: 300;
-	margin-top: 10px;
+	margin: 10px 0;
 	text-align: center;
+	flex-shrink: 0;
 }
 
 .content {
@@ -154,45 +165,6 @@ footer {
 	margin: auto;
 	text-decoration: none;
 }
-
-.intro {
-	display: inline-flex;
-	justify-content: space-around;
-	margin: 0;
-}
-.intro svg {
-	width: 100%;
-	height: auto;
-	flex-grow: 1;
-}
-.intro h1 {
-	font-family: 'Permanent Marker', cursive;
-  font-weight: normal;
-	padding: 20px 0 5px 0;
-}
-.introtext {
-	padding-left: 10px;
-}
-
-
-
-
-/* About page */
-.about {
-	/* background: rgba(92, 164, 169, 0.2); */
-	margin: 0 50px;
-	/*padding: 20px 20px; */
-	border-radius: 20px;
-
-}
-.about h2 {
-	padding: 0 0 5px 0;
-}
-.about img {
-
-	width: 40%;
-}
-
 
 /* Projects page */
 .project-item {
